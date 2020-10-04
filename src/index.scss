@@ -1,0 +1,29 @@
+@import "styles/fonts";
+@import "styles/variables";
+@import "styles/all";
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 50%,
+    rgba(0, 0, 0, 0.5) 100%
+  ),
+  url('img/background.png');
+  background-size: cover;
+  font-family: 'Arial', sans-serif;
+}
+
+.app {
+  padding: 0;
+
+  &__title {
+    text-align: center;
+    font-size: 36px;
+    font-weight: 400;
+    font-family: 'Exo 2.0 Thin', 'Arial', sans-serif;
+    color: white;
+  }
+}

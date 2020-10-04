@@ -1,0 +1,11 @@
+.items-container {
+  display: grid;
+  position: relative;
+  margin: 0 auto;
+  padding: 0;
+  max-width: 1120px;
+  grid-template: repeat(auto-fit, 520px) / repeat(auto-fill, 320px);
+  grid-gap: 80px 20px;
+  justify-content: space-around;
+  justify-items: center;
+}

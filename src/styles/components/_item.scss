@@ -1,0 +1,182 @@
+.item {
+  width: 320px;
+  height: 520px;
+
+  &__description {
+    margin-top: 10px;
+    text-align: center;
+    color: white;
+    font-size: 13px;
+
+    &--disabled {
+      color: #ffff66;
+      pointer-events: none;
+    }
+  }
+
+  &__buy {
+    color: #1698d9;
+    border-bottom: 1px dashed #1698d9;
+    cursor: pointer;
+  }
+}
+
+.card {
+  position: relative;
+  width: 100%;
+  height: 480px;
+  box-sizing: border-box;
+  padding-top: 20px;
+  padding-left: 45px;
+  border-radius: 10px;
+  border: 4px solid $default-color;
+  background-color: white;
+  cursor: pointer;
+  clip-path: polygon(15% 0, 100% 0, 100% 0, 100% 100%, 100% 100%, 0 100%, 0 100%, 0 10%);
+  overflow: hidden;
+
+  &::before {
+    content: '';
+    position: absolute;
+    transform: rotate(45deg);
+    left: -40px;
+    top: -40px;
+    width: 70px;
+    height: 70px;
+    border-right: 5px solid $default-color;
+    background: none;
+  }
+
+  &__title {
+    display: inline-block;
+    font-size: 16px;
+    color: #666;
+  }
+
+  &__brand {
+    font-size: 48px;
+  }
+
+  &__taste {
+    display: inline-block;
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  &__feed-quantity {
+    color: #666;
+  }
+
+  &__bonus {
+    color: #666;
+  }
+
+  &__additional {
+    color: #666;
+  }
+
+  &__img {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: 1;
+  }
+
+  &__weight {
+    position: absolute;
+    right: 12px;
+    bottom: 12px;
+    width: 80px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    background-color: $default-color;
+    z-index: 2;
+
+    &-total {
+      color: white;
+      font-size: 42px;
+      line-height: 1;
+    }
+
+    &-kg {
+      color: white;
+      font-size: 21px;
+      line-height: 1;
+    }
+  }
+
+  &--default:hover {
+    border-color: $default-hover-color;
+
+    .card__weight {
+      background-color: $default-hover-color;
+    }
+
+    &::before {
+      border-color: $default-hover-color;
+    }
+  }
+
+  &--selected {
+    border-color: $selected-color;
+
+    &::before {
+      border-color: $selected-color;
+    }
+
+    .card__weight {
+      background-color: $selected-color;
+    }
+
+    &:hover {
+      border-color: $selected-hover-color;
+
+      &::before {
+        border-color: $selected-hover-color;
+      }
+
+      .card__title {
+        color: $selected-hover-color;
+      }
+
+      .card__weight {
+        background-color: $selected-hover-color;
+      }
+    }
+  }
+
+  &--just-selected {
+    border-color: $selected-color;
+
+    &::before {
+      border-color: $selected-color;
+    }
+
+    .card__weight {
+      background-color: $selected-color;
+    }
+  }
+
+  &--disabled {
+    background-color: $disabled-color2;
+    border-color: $disabled-color;
+    color: $disabled-color;
+    cursor: not-allowed;
+
+    &::before {
+      border-color: $disabled-color;
+    }
+
+    .card__weight {
+      background-color: $disabled-color;
+    }
+
+    .card__img {
+      opacity: 0.4;
+    }
+  }
+}
