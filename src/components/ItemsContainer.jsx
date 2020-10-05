@@ -5,7 +5,7 @@ function ItemsContainer() {
   const [items, setItems] = React.useState([])
 
   React.useEffect(() => {
-    fetch('cat-food-two.vercel.app/items.json')
+    fetch('https://cat-food-two.vercel.app/items.json')
       .then((res) => res.json())
       .then((json) => setItems(json.items))
   }, [])
