@@ -5,7 +5,7 @@ function ItemsContainer() {
   const [items, setItems] = React.useState([])
 
   React.useEffect(() => {
-    fetch('http://localhost:3000/items.json')
+    fetch('https://energoww.github.io/cat-food/items.json')
       .then((res) => res.json())
       .then((json) => setItems(json.items))
   }, [])
